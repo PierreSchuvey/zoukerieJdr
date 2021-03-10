@@ -17,11 +17,13 @@ body{
   border-radius: 50%;
   float: left;
   margin-right: 20px;
+  width: 100px;
 }
 .title #imgRight{
   border-radius: 50%;
   float: right;
   margin-left: 20px;
+  width: 100px;
 }
 .title h1{
   vertical-align: middle;
