@@ -1,5 +1,10 @@
 $("video").css("display","none");
+$("video2").css("display","none");
 $("#rolling").on("click",function() {
+  if($("#nbDices").val() == "Pokémon"){
+        $("#video2").css("display","block");
+        $("#video2")[0].autoplay = true;
+  }
 var nbSix = 0;
 var nbOne = 0;
 $( ".dice" ).remove();
