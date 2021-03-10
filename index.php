@@ -48,6 +48,9 @@
     <video id="video" style="position:absolute;top:0;width:100%;z-index:-1000" controls>
       <source src="assets/images/bandO.mp4" type="video/mp4">
     </video>
+    <video id="video2" style="position:absolute;top:0;width:100%;z-index:-1000" controls>
+      <source src="assets/images/pokemon.mp4" type="video/mp4">
+    </video>
   </body>
   <footer>
     <script src="assets/js/jquery.js"></script>
