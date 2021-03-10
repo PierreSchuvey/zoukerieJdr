@@ -7,7 +7,7 @@ $("#rolling").on("click",function() {
   }
   if($("#nbDices").val() == "Négatif"){
         $('body').css('filter','invert(1)');
-              $('body').css('background','#EBACA2');
+        $('body').addClass('reverse');
   }
 var nbSix = 0;
 var nbOne = 0;
