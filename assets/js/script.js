@@ -1,5 +1,7 @@
+$(document).ready(function(){
 $("video").css("display","none");
 $("video2").css("display","none");
+$("#snowBox").css("display","none");
 $("#rolling").on("click",function() {
   if($("#nbDices").val() == "Pokémon"){
         $('#imgLeft').attr('src','https://pngimg.com/uploads/pokeball/pokeball_PNG8.png')
@@ -52,6 +54,11 @@ n = 0;
 $(document).keydown(function (e) {
     if (e.keyCode === k[n++]) {
         if (n === k.length) {
+            $(".diceText").css('background-color','blue');
+            $('#imgLeft').attr('src','../assets/images/flocon.png')
+            $('#imgRight').attr('src','../assets/images/flocon.png')
+            $("body").css("background","radial-gradient(ellipse at bottom, #1b2735 0%");
+            $("#snowBox").css("display","block");
             $("#video").css("display","block");
             $("#video")[0].autoplay = true;
             n = 0;
@@ -62,3 +69,4 @@ $(document).keydown(function (e) {
         n = 0;
     }
 })
+});
