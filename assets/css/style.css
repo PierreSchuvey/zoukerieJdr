@@ -56,11 +56,12 @@ button:hover{
 .dice{
   border:white solid 2px;
   border-radius: 25%;
-  color:white;
+  color:black;
   width: 50px;
   height: 50px;
   display: inline-grid;
   margin: 5px;
+  background-color: white
 }
 .dice p{
   text-align: center;
@@ -70,16 +71,17 @@ button:hover{
 .diceTotal{
   border:white solid 2px;
   border-radius: 25%;
-  color:white;
+  color:black;
   width: 200px;
   height: 200px;
   display: inline-grid;
   margin: 5px;
+  background-color: white
 }
 .diceTotal p{
   text-align: center;
-  line-height: 180px;
-  font-size: 100px;
+  line-height: 100px;
+  font-size: 50px;
 }
 .nbMain{
   color: white;
