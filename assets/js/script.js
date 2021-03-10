@@ -1,3 +1,4 @@
+$("video").css("display","none");
 $("#rolling").on("click",function() {
 var nbSix = 0;
 var nbOne = 0;
@@ -10,7 +11,13 @@ $( ".diceTotal" ).remove();
   var maxRange = 6*nbDices;
   for(x=0;x<nbDices;x++) {
     var valueDice = Math.floor(Math.random() * 6) + 1;
-    $("#resultat").append('<div class="dice"><p class="textDice">'+valueDice+'</p></div>');
+    if(valueDice == 1){
+      $("#resultat").append('<div class="dice"><p class="textDice"><span style="color:red">'+valueDice+'</span></p></div>');
+    }else if (valueDice == 6) {
+      $("#resultat").append('<div class="dice"><p class="textDice"><span style="color:green">'+valueDice+'</span></p></div>');
+    }else{
+      $("#resultat").append('<div class="dice"><p class="textDice"><span>'+valueDice+'</span></p></div>');
+    }
     sum = sum + valueDice;
     if(valueDice == 6){
       nbSix = nbSix +1;
@@ -19,8 +26,30 @@ $( ".diceTotal" ).remove();
       nbOne = nbOne +1;
     }
   }
+  var pourcentage = (sum / maxRange) * 100;
+if(pourcentage.toFixed(2) <= 30.00){
+  $("#total").append('<div class="diceTotal"><p class="textDiceTotal">'+sum+'/'+maxRange+'<br><span style="color:red">'+pourcentage.toFixed(2)+'%</span></p></div>');
+}else if (pourcentage.toFixed(2) >= 85.00) {
+  $("#total").append('<div class="diceTotal"><p class="textDiceTotal">'+sum+'/'+maxRange+'<br><span style="color:green">'+pourcentage.toFixed(2)+'%</span></p></div>');
+}else{
+  $("#total").append('<div class="diceTotal"><p class="textDiceTotal">'+sum+'/'+maxRange+'<br>'+pourcentage.toFixed(2)+'%</p></div>');
+}
 
-    $("#total").append('<div class="diceTotal"><p class="textDiceTotal">'+sum+'</p></div>');
-    $("#nbSix").append('<p class="nbMain">Nombre de Six : <span style="font-weight:bold">'+nbSix+'</span>');
-    $("#nbOne").append('<p class="nbMain">Nombre de Six : <span style="font-weight:bold">'+nbOne+'</span>');
+  $("#nbSix").append('<p class="nbMain">Nombre de Six : <span style="font-weight:bold">'+nbSix+'</span>');
+  $("#nbOne").append('<p class="nbMain">Nombre de Un : <span style="font-weight:bold">'+nbOne+'</span>');
 });
+var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+n = 0;
+$(document).keydown(function (e) {
+    if (e.keyCode === k[n++]) {
+        if (n === k.length) {
+            $("#video").css("display","block");
+            $("#video")[0].autoplay = true;
+            n = 0;
+            return false;
+        }
+    }
+    else {
+        n = 0;
+    }
+})
