@@ -19,8 +19,9 @@ $( ".diceTotal" ).remove();
       nbOne = nbOne +1;
     }
   }
+  var pourcentage = (sum / maxRange) * 100;
 
-    $("#total").append('<div class="diceTotal"><p class="textDiceTotal">'+sum+'</p></div>');
-    $("#nbSix").append('<p class="nbMain">Nombre de Six : <span style="font-weight:bold">'+nbSix+'</span>');
-    $("#nbOne").append('<p class="nbMain">Nombre de Six : <span style="font-weight:bold">'+nbOne+'</span>');
+  $("#total").append('<div class="diceTotal"><p class="textDiceTotal">'+sum+'/'+maxRange+'<br>'+pourcentage.toFixed(2)+'%</p></div>');
+  $("#nbSix").append('<p class="nbMain">Nombre de Six : <span style="font-weight:bold">'+nbSix+'</span>');
+  $("#nbOne").append('<p class="nbMain">Nombre de Un : <span style="font-weight:bold">'+nbOne+'</span>');
 });
