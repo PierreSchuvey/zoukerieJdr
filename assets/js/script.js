@@ -6,8 +6,8 @@ $("#rolling").on("click",function() {
         $('#imgRight').attr('src','https://pngimg.com/uploads/pokeball/pokeball_PNG8.png')
   }
   if($("#nbDices").val() == "Négatif"){
-        $('body').css('filter','invert(1)');
         $('body').addClass('reverse');
+        $('.reverse').css('filter','invert(1)');
   }
 var nbSix = 0;
 var nbOne = 0;
