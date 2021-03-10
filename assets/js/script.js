@@ -5,6 +5,10 @@ $("#rolling").on("click",function() {
         $('#imgLeft').attr('src','https://pngimg.com/uploads/pokeball/pokeball_PNG8.png')
         $('#imgRight').attr('src','https://pngimg.com/uploads/pokeball/pokeball_PNG8.png')
   }
+  if($("#nbDices").val() == "Négatif"){
+        $('body').css('filter','invert(1)');
+              $('body').css('background','#EBACA2');
+  }
 var nbSix = 0;
 var nbOne = 0;
 $( ".dice" ).remove();
