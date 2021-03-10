@@ -45,13 +45,13 @@
         </div>
         <button id="rolling" type="button" name="button">Lancer</button>
     </div>
-    <video id="video" style="position:absolute;top:0;width:100%;z-index:-1000;height:100vh" controls>
+    <video id="video" style="display:none;position:absolute;top:0;width:100%;z-index:-1000;height:100vh" controls>
       <source src="assets/images/reine.mp4" type="video/mp4">
     </video>
-    <video id="video2" style="display:block;margin:auto" controls>
+    <video style="display:none" id="video2" style="display:block;margin:auto" controls>
       <source src="assets/images/pokemon.mp4" type="video/mp4">
     </video>
-    <div id="snowBox">
+    <div style="display:none" id="snowBox">
     <div class="snow"></div>
     <div class="snow"></div>
     <div class="snow"></div>
